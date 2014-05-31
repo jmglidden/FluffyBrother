@@ -1,0 +1,140 @@
+<xml version="1.0">
+<dashboard>
+	<widget field="Speed" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.SimpleDial">
+		<location x="1" y="127"/>
+		<property name="Upper Limit" value="2000.0"/>
+		<property name="Lower Limit" value="-2000.0"/>
+		<property name="Tick Interval" value="200.0"/>
+	</widget>
+	<widget field="CatEncoder" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.LinePlot">
+		<location x="421" y="4"/>
+	</widget>
+	<widget field="CatHighGoalRoutine" type="Command" class="edu.wpi.first.smartdashboard.gui.elements.Command">
+		<location x="424" y="318"/>
+	</widget>
+	<widget field="Stop Compressor" type="Command" class="edu.wpi.first.smartdashboard.gui.elements.Command">
+		<location x="28" y="325"/>
+	</widget>
+	<widget field="CatUnloadRoutine" type="Command" class="edu.wpi.first.smartdashboard.gui.elements.Command">
+		<location x="656" y="349"/>
+	</widget>
+	<widget field="CatFwdPassRoutine" type="Command" class="edu.wpi.first.smartdashboard.gui.elements.Command">
+		<location x="424" y="357"/>
+	</widget>
+	<widget field="DriveStraightAuto" type="Command" class="edu.wpi.first.smartdashboard.gui.elements.Command">
+		<location x="225" y="46"/>
+	</widget>
+	<widget field="CatKill" type="Command" class="edu.wpi.first.smartdashboard.gui.elements.Command">
+		<location x="715" y="316"/>
+	</widget>
+	<widget field="TogglePincer" type="Command" class="edu.wpi.first.smartdashboard.gui.elements.Command">
+		<location x="272" y="181"/>
+	</widget>
+	<widget field="OneBallAuto" type="Command" class="edu.wpi.first.smartdashboard.gui.elements.Command">
+		<location x="251" y="14"/>
+	</widget>
+	<widget field="Select Auto Mode" type="String Chooser" class="edu.wpi.first.smartdashboard.gui.elements.Chooser">
+		<location x="9" y="12"/>
+	</widget>
+	<widget field="ToggleTilt" type="Command" class="edu.wpi.first.smartdashboard.gui.elements.Command">
+		<location x="288" y="148"/>
+	</widget>
+</dashboard>
+<live-window>
+	<widget field="Ungrouped" type="LW Subsystem" class="edu.wpi.first.smartdashboard.livewindow.elements.LWSubsystem">
+		<widget field="AnalogChannel[1,1]" type="Table" class="edu.wpi.first.smartdashboard.livewindow.elements.SingleNumberDisplay">
+			<location x="6" y="16"/>
+			<height>20</height>
+			<width>293</width>
+		</widget>
+		<widget field="DoubleSolenoid[1,1]" type="Table" class="edu.wpi.first.smartdashboard.livewindow.elements.RelayController">
+			<location x="6" y="36"/>
+			<height>20</height>
+			<width>293</width>
+		</widget>
+		<widget field="AnalogChannel[8,1]" type="Table" class="edu.wpi.first.smartdashboard.livewindow.elements.SingleNumberDisplay">
+			<location x="6" y="56"/>
+			<height>20</height>
+			<width>293</width>
+		</widget>
+		<widget field="Relay[1,1]" type="Table" class="edu.wpi.first.smartdashboard.livewindow.elements.RelayController">
+			<location x="6" y="76"/>
+			<height>20</height>
+			<width>293</width>
+		</widget>
+		<widget field="DoubleSolenoid[1,3]" type="Table" class="edu.wpi.first.smartdashboard.livewindow.elements.RelayController">
+			<location x="6" y="96"/>
+			<height>20</height>
+			<width>293</width>
+		</widget>
+		<widget field="CANJaguar[3,0]" type="Table" class="edu.wpi.first.smartdashboard.livewindow.elements.SpeedController">
+			<location x="6" y="116"/>
+			<height>46</height>
+			<width>293</width>
+		</widget>
+		<widget field="CANJaguar[2,0]" type="Table" class="edu.wpi.first.smartdashboard.livewindow.elements.SpeedController">
+			<location x="6" y="162"/>
+			<height>46</height>
+			<width>293</width>
+		</widget>
+		<location x="535" y="7"/>
+		<width>305</width>
+		<height>215</height>
+	</widget>
+	<widget field="Catapult" type="LW Subsystem" class="edu.wpi.first.smartdashboard.livewindow.elements.LWSubsystem">
+		<widget field="Encoder" type="Table" class="edu.wpi.first.smartdashboard.livewindow.elements.EncoderDisplay">
+			<location x="6" y="16"/>
+			<height>98</height>
+			<width>201</width>
+		</widget>
+		<widget field="PIDSubsystem Controller" type="Table" class="edu.wpi.first.smartdashboard.gui.elements.PIDEditor">
+			<location x="6" y="114"/>
+			<height>136</height>
+			<width>201</width>
+		</widget>
+		<location x="316" y="7"/>
+		<width>213</width>
+		<height>257</height>
+	</widget>
+	<widget field="Drive" type="LW Subsystem" class="edu.wpi.first.smartdashboard.livewindow.elements.LWSubsystem">
+		<widget field="LEncoder" type="Table" class="edu.wpi.first.smartdashboard.livewindow.elements.EncoderDisplay">
+			<location x="6" y="16"/>
+			<height>98</height>
+			<width>293</width>
+		</widget>
+		<widget field="REncoder" type="Table" class="edu.wpi.first.smartdashboard.livewindow.elements.EncoderDisplay">
+			<location x="6" y="114"/>
+			<height>98</height>
+			<width>293</width>
+		</widget>
+		<widget field="Turn" type="Table" class="edu.wpi.first.smartdashboard.livewindow.elements.SpeedController">
+			<location x="6" y="212"/>
+			<height>46</height>
+			<width>293</width>
+		</widget>
+		<widget field="Gyro" type="Table" class="edu.wpi.first.smartdashboard.gui.elements.Compass">
+			<location x="6" y="258"/>
+			<height>150</height>
+			<width>293</width>
+		</widget>
+		<widget field="LSpeed" type="Table" class="edu.wpi.first.smartdashboard.livewindow.elements.SpeedController">
+			<location x="6" y="408"/>
+			<height>46</height>
+			<width>293</width>
+		</widget>
+		<widget field="GyroPID" type="Table" class="edu.wpi.first.smartdashboard.gui.elements.PIDEditor">
+			<location x="6" y="454"/>
+			<height>136</height>
+			<width>293</width>
+		</widget>
+		<widget field="RSpeed" type="Table" class="edu.wpi.first.smartdashboard.livewindow.elements.SpeedController">
+			<location x="6" y="590"/>
+			<height>46</height>
+			<width>293</width>
+		</widget>
+		<location x="5" y="4"/>
+		<width>305</width>
+		<height>643</height>
+	</widget>
+</live-window>
+</xml>

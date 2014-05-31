@@ -1,0 +1,5 @@
+#CD Recommended .gitignore from http://www.chiefdelphi.com/forums/showthread.php?t=124092&page=2
+*.d
+*.o
+ctdt.c
+ctdt.o
