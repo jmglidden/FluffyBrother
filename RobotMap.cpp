@@ -36,11 +36,7 @@ void RobotMap::init() {
 	driveRSpeed = new Talon(1, 1);
 	lw->AddActuator("Drive", "RSpeed", (Talon*) driveRSpeed);
 	
-<<<<<<< HEAD
 	driveControl = new RobotDrive(driveLSpeed, driveRSpeed);
-=======
-	driveControl = new KomodoDrive(driveLSpeed, driveRSpeed, .7, 1);
->>>>>>> 9b7a4773dc4e2cd513433718ae9175500f71b6c5
 	
 	driveControl->SetSafetyEnabled(true);
         driveControl->SetExpiration(0.1);
