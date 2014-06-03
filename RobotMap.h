@@ -22,7 +22,7 @@ public:
 	
 	static SpeedController* driveLSpeed;
 	static SpeedController* driveRSpeed;
-	static KomodoDrive* driveControl;
+	static RobotDrive* driveControl;
 	static Gyro* driveGyro;
 	static SpeedController* driveTurn;
 	static PIDController* driveGyroPID;

@@ -13,7 +13,7 @@
 
 SpeedController* RobotMap::driveLSpeed = NULL;
 SpeedController* RobotMap::driveRSpeed = NULL;
-KomodoDrive* RobotMap::driveControl = NULL;
+RobotDrive* RobotMap::driveControl = NULL;
 Gyro* RobotMap::driveGyro = NULL;
 SpeedController* RobotMap::driveTurn = NULL;
 PIDController* RobotMap::driveGyroPID = NULL;
@@ -36,7 +36,7 @@ void RobotMap::init() {
 	driveRSpeed = new Talon(1, 1);
 	lw->AddActuator("Drive", "RSpeed", (Talon*) driveRSpeed);
 	
-	driveControl = new KomodoDrive(driveLSpeed, driveRSpeed, .1, 1);
+	driveControl = new RobotDrive(driveLSpeed, driveRSpeed);
 	
 	driveControl->SetSafetyEnabled(true);
         driveControl->SetExpiration(0.1);
@@ -49,7 +49,7 @@ void RobotMap::init() {
 	driveTurn = new Victor(1, 4);
 	//lw->AddActuator("Drive", "Turn", (Victor*) driveTurn);
 	
-	driveGyroPID = new PIDController(-0.03, 0.0, 0.0,/* F: 0.0, */ driveGyro, driveTurn, 0.02);
+	driveGyroPID = new PIDController(0.03, 0.0, 0.0,/* F: 0.0, */ driveGyro, driveTurn, 0.02);
 	lw->AddActuator("Drive", "GyroPID", driveGyroPID);
 	driveGyroPID->SetContinuous(false); driveGyroPID->SetAbsoluteTolerance(0.2); 
         driveGyroPID->SetOutputRange(-1.0, 1.0);
@@ -69,7 +69,7 @@ void RobotMap::init() {
 	lw->AddSensor("El Pincho", "Pinch", pincerPinch);
 	lw->AddSensor("El Pincho", "Tilt", tiltTilt);
 	
-	compressorSysComp = new Compressor(1, 1, 1, 1);
+	compressorSysComp = new Compressor(1, 1, 1, 4);
 	
 	
 	catapultEncoder = new Encoder(1, 6, 1, 7, false, Encoder::k4X);

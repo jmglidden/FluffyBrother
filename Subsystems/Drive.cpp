@@ -42,14 +42,14 @@ void Drive::UseKomodoDrive(float throttleCmd, float turnStick){
 	lcd->PrintfLine(DriverStationLCD::kUser_Line3, "Turn Command: %f", turnCmd);
 	lcd->PrintfLine(DriverStationLCD::kUser_Line4, "Speed Command: %f", throttleCmd);
 	lcd->UpdateLCD();
-	control->KomodoArcadeDrive(throttleCmd, turnCmd);
+	control->ArcadeDrive(throttleCmd, turnCmd);
 }
 void Drive::UseArcadeDrive(float throttleCmd, float turnCmd){
 	lcd->Clear();
 	lcd->PrintfLine(DriverStationLCD::kUser_Line1, "Using Arcade Drive");
 	lcd->UpdateLCD();
 	gyroPID->Disable();
-	control->KomodoArcadeDrive(throttleCmd, turnCmd, false); //delete 3rd argument to go back to using  squared inputs (default)
+	control->ArcadeDrive(throttleCmd, turnCmd, false); //delete 3rd argument to go back to using  squared inputs (default)
 }
 float Drive::GetPIDTurnCmd(float stick){
 	float deadBand = .1;

@@ -31,7 +31,7 @@ else
 MODE_DIR := NonDebug
 endif
 OBJ_DIR := .
-WS_ROOT_DIR := D:/Windriver
+WS_ROOT_DIR := D:/FluffyBrotherWorkspace
 PRJ_ROOT_DIR := $(WS_ROOT_DIR)/FluffyBrother
 
 
